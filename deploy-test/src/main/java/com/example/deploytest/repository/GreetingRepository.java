@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface GreetingRepository  extends JpaRepository<Greetings, Integer> {
-    Greetings findByLang_code(String langCode);
+    Greetings findByLangCode(String langCode);
 }

@@ -12,6 +12,6 @@ public class Greetings {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    String lang_code;
+    String langCode;
     String message;
 }

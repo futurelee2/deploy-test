@@ -12,8 +12,8 @@ import org.springframework.stereotype.Service;
 public class GreetingService {
     private final GreetingRepository greetingRepository;
 
-    public GreetingResponse greeting(String lang_code) {
-         Greetings response = greetingRepository.findByLang_code(lang_code);
-        return new GreetingResponse (response.getLang_code(),response.getMessage());
+    public GreetingResponse greeting(String langCode) {
+         Greetings response = greetingRepository.findByLangCode(langCode);
+        return new GreetingResponse(response.getLangCode(),response.getMessage());
     }
 }

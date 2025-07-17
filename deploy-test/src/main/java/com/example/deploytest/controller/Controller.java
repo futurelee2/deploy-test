@@ -23,8 +23,8 @@ public class Controller {
     }
 
     @GetMapping("/greeting")
-    public GreetingResponse greeting(@RequestParam(name = "lang", defaultValue = "kr") String lang_code){
-        return greetingService.greeting(lang_code);
+    public GreetingResponse greeting(@RequestParam(name = "lang", defaultValue = "kr") String langCode){
+        return greetingService.greeting(langCode);
     }
 
 }
