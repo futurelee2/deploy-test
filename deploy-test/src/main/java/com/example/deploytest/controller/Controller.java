@@ -22,7 +22,7 @@ public class Controller {
         return "Hello, World!";
     }
 
-    @PostMapping("/greeting")
+    @GetMapping("/greeting")
     public GreetingResponse greeting(@RequestParam(name = "lang", defaultValue = "kr") String lang_code){
         return greetingService.greeting(lang_code);
     }
