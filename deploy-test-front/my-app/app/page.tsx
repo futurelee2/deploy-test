@@ -9,7 +9,7 @@ export default function Home() {
   useEffect(() => {
     if (!lang) return;
 
-    fetch(`http://192.168.20.144:9090/greeting?lang=${lang}`)
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/greeting?lang=${lang}`)
       .then((res) => res.text())
       .then((text) => setMsg(text))
       .catch(() => setMsg("인사말 오류"));
@@ -19,7 +19,7 @@ export default function Home() {
     <>
       <div>인사말</div>
       <label>언어선택</label>
-      <select value={lang} onChange={() => setLang(lang)}>
+      <select value={lang} onChange={(e) => setLang(e.target.value)}>
         <option>kr</option>
         <option>en</option>
         <option>jp</option>
