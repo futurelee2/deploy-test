@@ -10,8 +10,8 @@ export default function Greeting() {
     if (!lang) return;
 
     fetch(`${process.env.NEXT_PUBLIC_API_URL}/greeting?lang=${lang}`)
-      .then((res) => res.text())
-      .then((text) => setMsg(text))
+      .then((res) => res.json())
+      .then((data) => setMsg(data.message))
       .catch(() => setMsg("인사말 오류"));
   }, [lang]);
 
