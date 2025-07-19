@@ -4,7 +4,6 @@ import com.example.deploytest.dto.GreetingResponse;
 import com.example.deploytest.entitiy.Greetings;
 import com.example.deploytest.repository.GreetingRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 @Service
